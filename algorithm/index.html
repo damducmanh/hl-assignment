@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        .ct-inner-left {
+            background-color: #0c5356;
+            color: #d4d4d4;
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 14px;
+            line-height: 19px;
+            white-space: pre;
+            height: calc(100vh - 300px);
+        }
+        .ct-inner-right{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 300px;
+            width: 100%;
+            z-index: 2;
+            background-color: #272932;
+            color: #fff;
+        }
+        .powers-drag-handle {
+            height: 50px;
+            background-color: #1e1e1e;
+        }
+        .ct-inner-right ul {
+            padding: 0;
+            margin: 0;
+        }
+        .ct-inner-right ul li {
+            border-bottom: 1px solid #5a5f73;
+            padding: 8px 0 8px 15px;
+            color: #96b38a;
+        }
+        .powers-drag-handle {
+            color: #ffffff;
+            font-size: 18px;
+            height: 40px;
+            padding-left: 15px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="ct-inner-left">
+            <code>
+                const simpleArray = "1 2 3 4 5".split(" ").map(num => parseInt(num));
+                function miniMaxSum(arr) {
+                    const [maxValue, minValue] = [Math.max(...arr), Math.min(...arr)]
+                    const [maxSum, minSum] = [
+                        arr.reduce((a,b) => a+b) - maxValue,
+                        arr.reduce((a,b) => a+b) - minValue
+                    ]
+                    return `${minSum} ${maxSum}`
+                }
+                function totalArray(arr) {
+                    return arr.reduce((partialSum, a) => partialSum + a, 0)
+                }
+                function minInArray(arr) {
+                    return Math.min(...arr)
+                }
+                function maxInArray(arr) {
+                    return Math.max(...arr);
+                }
+                function findEvenElements(arr) {
+                    return arr.filter(num => num % 2 === 0)
+                }
+                function findOddElements(arr) {
+                    return arr.filter(num => num % 2 !== 0)
+                }
+            </code>
+        </div>
+        <div class="ct-inner-right">
+            <div class="powers-drag-handle">Console</div>
+            <div id="show-consoles">
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+      const simpleArray = "1 2 3 4 5".split(" ").map(num => parseInt(num));
+      function miniMaxSum(arr) {
+        const [maxValue, minValue] = [Math.max(...arr), Math.min(...arr)]
+        const [maxSum, minSum] = [
+            arr.reduce((a,b) => a+b) - maxValue,
+            arr.reduce((a,b) => a+b) - minValue
+        ]
+        return `${minSum} ${maxSum}`
+      }
+      function totalArray(arr) {
+          return arr.reduce((partialSum, a) => partialSum + a, 0)
+      }
+      function minInArray(arr) {
+       return Math.min(...arr)
+      }
+      function maxInArray(arr) {
+          return Math.max(...arr);
+      }
+      function findEvenElements(arr) {
+          return arr.filter(num => num % 2 === 0)
+      }
+      function findOddElements(arr) {
+          return arr.filter(num => num % 2 !== 0)
+      }
+      // DISPLAY RESULTS
+      document.getElementById('show-consoles').innerHTML = `<ul>
+           <li>miniMaxSum ${miniMaxSum(simpleArray)}</li>
+           <li>simpleArray ${totalArray(simpleArray)}</li>
+           <li>minInArray ${minInArray(simpleArray)}</li>
+           <li>maxInArray ${maxInArray(simpleArray)}</li>
+           <li>findEvenElements ${findEvenElements(simpleArray)}</li>
+           <li>findOddElements ${findOddElements(simpleArray)}</li>
+      </ul>`
+
+    </script>
+</body>
+</html>
