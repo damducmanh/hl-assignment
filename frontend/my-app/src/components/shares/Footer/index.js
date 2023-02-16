@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <div className="copy-right">{footerContent.copyRight}</div>
     </FooterStyled>
-  )
-}
+  );
+};
 
-export default React.memo(Footer)
+export default React.memo(Footer);
