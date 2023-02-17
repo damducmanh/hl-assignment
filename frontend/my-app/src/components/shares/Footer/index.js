@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <FooterStyled className="container">
       <div className="footer-content">
-        <p>{footerContent.intro}</p>
+        <p dangerouslySetInnerHTML={{ __html: footerContent.intro }} />
       </div>
       <div className="copy-right">{footerContent.copyRight}</div>
     </FooterStyled>

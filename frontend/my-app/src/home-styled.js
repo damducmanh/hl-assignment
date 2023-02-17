@@ -92,11 +92,13 @@ export const BannerSection = styled.div`
     }
     h2 {
       font-size: 28px;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     p {
-      font-size: 14px;
+      font-size: 12px;
+      font-weight: 600;
+      margin: 10px 0 0 0;
     }
     @media ${device.laptop} {
       h2 {
@@ -115,8 +117,9 @@ export const StoriesSection = styled.div`
   }
   .stories {
     color: #646464;
-    font-weight: 600;
+    font-weight: 400;
     padding: 0 15px;
+    line-height: 24px;
     @media ${device.mobileL} {
       font-size: 14px;
     }
@@ -172,11 +175,15 @@ export const FooterStyled = styled.footer`
   font-size: 14px;
   @media ${device.mobileL} {
     padding: 22px 0;
+    br {
+      display: none;
+    }
   }
 `;
 
 export const Main = styled.main`
   min-height: calc(100vh - 294.5px);
+  background-color: #fcfcfc;
   @media ${device.mobileL} {
     min-height: calc(100vh - 320px);
   }

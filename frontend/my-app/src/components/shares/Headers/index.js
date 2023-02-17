@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../../../assets/images/logo.png';
 import avatar from '../../../assets/images/avatar.jpeg';
+import { Header } from '../../../home-styled';
 
 const Headers = () => {
   return (
-    <Headers>
+    <Header>
       <div className="header container">
         <div className="header__logo">
           <img src={logo} alt={logo} />
@@ -20,8 +21,8 @@ const Headers = () => {
           </div>
         </div>
       </div>
-    </Headers>
-  )
-}
+    </Header>
+  );
+};
 
-export default React.memo(Headers)
+export default React.memo(Headers);

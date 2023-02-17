@@ -3,13 +3,13 @@ export const mockStories = [
     id: 1,
     name: 'story 1',
     story: `
-    A child asked his father, "How were people born?"<br/>
-    So his father said, "Adam and Eve made babies, then their babies became adults and made babies, and so on."<br/>
+    A child asked his father, "How were people born?"
+    So his father said, "Adam and Eve made babies, then their <br/> babies became adults and made babies, and so on."
     
-    The child then went to his mother, asked her the same question and she told him, "We were monkeys then we evolved to become like we are now."<br/>
+    The child then went to his mother, asked her the same<br/> question and she told him, "We were monkeys then we evolved to become like we are now."
     
-    The child ran back to his father and said, "You lied to me!"<br/>
-    His father replied, "No, your mom was talking about her side of the family."
+    The child ran back<br/> to his father and said, "You lied to me!"
+    His father replied, "No, your mom was talking about her side of the<br/> family."
     `,
   },
   {
@@ -50,8 +50,7 @@ export const bannerContent = {
 };
 
 export const footerContent = {
-  intro:
-    'This website is created as part of Hlsolutions program. The materials contained on this website are provided for general information only and do not constitute any from of advice. HLS assumes no responsibility for the accuracy of any particular statement and accept no liability for any loss or damage which may arise from reliance on the information contained on this site.',
+  intro: `This website is created as part of Hlsolutions program. The materials contained on this website are provided for general <br/> information only and do not constitute any from of advice. HLS assumes no responsibility for the accuracy of any particular statement and <br/> accept no liability for any loss or damage which may arise from reliance on the information contained on this site.`,
   copyRight: 'Copyright 2021 HLS',
 };
 
