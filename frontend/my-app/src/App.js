@@ -13,6 +13,7 @@ import GlobalStyle from './global-styles';
 
 // ** Image Imports
 import Footer from './components/shares/Footer';
+import Headers from './components/shares/Headers';
 
 function App() {
   const [stories, setStories] = useState([]);
@@ -55,6 +56,7 @@ function App() {
   return (
     <HomeContainer>
       <GlobalStyle />
+      <Headers />
       <Main>
         <BannerSection>
           <div className="title">
